@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Review:
 
-* Ruby version
+* Controllers: `rails generate controller controller_name` ; Controller has Actions / Methods
+* Routes: link url to our controller methods `verb "address", to: "controller#action"`
+* Views: displays information from controller actions
 
-* System dependencies
+* Instance variables are defined in our controllers; we use them in the views
+* Params: passed via the form & in the url; params are a hash!
 
-* Configuration
+User Stories:
 
-* Database creation
 
-* Database initialization
+- `rails generate controller flats`
 
-* How to run the test suite
+* A home page listing flats
 
-* Services (job queues, cache servers, search engines, etc.)
+- Make a route from the Home Page: `get "home", to: "flats#index"`
+- Controller method: "index"
+- View: "index.html.erb"
 
-* Deployment instructions
 
-* ...
+* A dynamic show page for a specific flat
+
+- Make a route for the Specific Page: `get "flat/:id", to: "flats#show"`
+- Controller method: "show"
+- View: "show.html.erb"
